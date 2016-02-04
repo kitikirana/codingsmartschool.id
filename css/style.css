@@ -604,6 +604,12 @@ body {
 	color: #ffffff;
 	text-decoration:none;
 }
+img.lazyOwl {
+	border-radius: 50% !important;
+	width: 200px !important;
+	height: 200px !important;
+	
+}
 /* start news_letter */
 .news_letter{
 	margin: 8% 0;
