@@ -26,7 +26,7 @@ body {
 }
 .header_bg1 {
 	border-top:8px groove #3b3b3b;
-	background: url('../images/slider_bg.jpg') no-repeat  left;
+	/*background: url('../images/slider_bg.jpg') no-repeat  left;*/
 	background-size: 100%;
 }
 .header{
@@ -147,11 +147,11 @@ body {
 }
 /* start slider */
 .slider_bg{
-	background: url('../images/slider_bg.jpg') no-repeat;
+	/*background: url('../images/slider_bg.jpg') no-repeat;*/
 	background-size: 100%;
 	min-height:530px;
 	padding-top:13em;
-	background: url('../images/css-bg/bg6.png') no-repeat;
+	/*background: url('../images/css-bg/bg6.png') no-repeat;*/
 	/*background-size: 50%;*/
   background-position: center;
 }
@@ -356,6 +356,9 @@ body {
 	text-transform: capitalize;
 	display: block;
 	margin:10px 0 8px;
+}
+.social-links {
+	display: inline-block !important;
 }
 .tech_para{
 	padding-left: 0;
