@@ -1,8 +1,11 @@
+@import 'https://fonts.googleapis.com/css?family=Montserrat';
+
 /* GLOBAL STYLES
 -------------------------------------------------- */
 /* Padding below the footer and lighter body text */
 
 body {
+	font-family: 'Montserrat', sans-serif;
   padding-bottom: 3rem;
   color: #5a5a5a;
 }
@@ -99,4 +102,55 @@ body {
   .featurette-heading {
     margin-top: 7rem;
   }
+}
+
+/* FAQ */
+.ksi {
+	color: #888888;
+}
+.lambo {
+	font-size: 16px;
+}
+.lead {
+	margin-bottom: 30px;
+	font-size: 28px;
+	line-height: 1.46428571;
+	font-weight: 300;
+}
+
+/* Button Styles */
+.btn {
+    padding: 14px 24px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+ 
+.btn:focus, .btn:active:focus, .btn.active:focus {
+    outline: 0 none;
+}
+ 
+.btn-primary {
+    background: #f05f40;
+    color: #ffffff;
+}
+ 
+.btn-primary:hover, .btn-primary:focus, .btn-primary:active, .btn-primary.active, .open > .dropdown-toggle.btn-primary {
+    background: #eb3812;
+}
+ 
+.btn-primary:active, .btn-primary.active {
+    background: #f05f40;
+    box-shadow: none;
+}
+
+.btn-primary.raised {
+	box-shadow: 0 3px 0 0 #eb3812;
+}
+
+.btn-primary.raised:active, .btn-primary.raised.active {
+	background: #eb3812;
+	box-shadow: none;
+	margin-bottom: -3px;
+	margin-top: 3px;
 }
