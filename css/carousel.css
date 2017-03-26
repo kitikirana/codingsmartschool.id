@@ -205,3 +205,14 @@ body {
     background-color: #fff;
     color: #FFC107;
 }
+
+/* Index styles */
+.mentors-text {
+  margin-top: 20px;  
+}
+
+.mentors-img {
+  width: 150px;
+  height: 150px;
+  border-radius: 50%;
+}
