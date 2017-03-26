@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="Website Resmi CodingSmartSchool.">
+    <meta name="author" content="Coding Smart School">
+    <link rel="icon" href="img/favicon.ico">
+
+    <title>Coding Smart School</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="bower_components/bootstrap/dist/css/bootstrap.css" rel="stylesheet">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="http://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+		<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.6.3/css/font-awesome.min.css" rel="stylesheet" integrity="sha384-T8Gy5hrqNKT+hzMclPo118YTQO6cYprQmhrYwIiQ/3axmI1hQomh7Ud2hPOy8SP1" crossorigin="anonymous">
+
+    <!-- Custom styles for this template -->
+    <link href="css/carousel.css" rel="stylesheet">
+  </head>
+  <body>
+    <div class="content">
+
+
+    <!-- Marketing messaging and featurettes
+    ================================================== -->
+    <!-- Wrap the rest of the page in another container to center all the content. -->
+
+   <div class="container-fluid" align="center">
+   <a href="index.html">
+   	<img src="img/logo.png" alt="Coding Smart School" style="width:60%" heigth="300">
+   </a>
+   		<center>
+			<div class="form">
+				<hr>
+				<fieldset>
+					<h3 class="shawn">Daftar</h3>
+					
+					<label for="name">Masukan Nama</label>
+					<input type="text" id="name">
+
+					<label for="nik">Masukan NIK</label>
+					<input type="number" id="nik">
+
+					<label for="no">Masukan No BPJS</label>
+					<input type="number" id="bpjs">
+					
+					<label for="email">Masukan Email</label><input type="email" id="email">
+					
+					
+					<center><br><button class="button" onclick="standByMe()">Daftar</button></center>
+				</fieldset>			
+			</div>
+		</center>
+   </div>  
+   <br><br>
+   <hr>  
+   <br><br>
+    
+      <!-- FOOTER -->
+      <footer>
+        <div id="footer" class="container-fluid">
+					<div class="section">
+						<div class="row" align="center">
+							<div class="footer-box col-md-4 col-sm-4">
+								<a href="http://codingsmartschool.github.io"><img class="small-logo" src="img/logo.png" style="display: block;width: 220px;margin: 40px auto;"></a>
+							</div>
+							<div class="footer-box col-md-4 col-sm-4">
+								<div class="signup">
+									<div>
+									<br><br>
+										<a href="https://docs.google.com/forms/d/e/1FAIpQLSdIVrAL3iRazB1PZJuBquGqFq-0hYxN6yWgsd4bBBuMJGH39Q/viewform" target="_blank" class="btn btn-primary raised btn-lg">SUBSCRIBE</a>
+									</div>
+								</div>
+							</div>
+							<div class="footer-box col-md-4 col-sm-4">
+								<div class="follow">
+									<div class="follow-text"><!-- <span class="follow-followus"><h4>Ikuti Kami Di:</h4></span> --><br><br>
+										<span class="follow-icons">
+											<span class="circle-icon"><a href="http://facebook.com/codingsmartschool" target="_blank" style="color:black"><span class="fa fa-2x fa-facebook"></span></a></span>
+											<span class="circle-icon"><a href="http://instagram.com/codingsmartschool" target="_blank" style="color:black"><span class="fa fa-2x fa-instagram"></span></a></span>
+											<span class="circle-icon"><a href="http://twitter.com/codingsmart_sch" target="_blank" style="color:black"><span class="fa fa-2x fa-twitter"></span></a></span>
+											<span class="circle-icon"><a href="mailto:codingsmartschool@gmail.com" target="_blank" style="color:black"><span class="fa fa-2x fa-envelope-o"></span></a></span>
+										</span>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+      </footer>
+		</div><!-- /.content -->
+    
+
+
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://www.gstatic.com/firebasejs/3.7.3/firebase.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.0.0/jquery.min.js" integrity="sha384-THPy051/pYDQGanwU6poAc/hOdQxjnOEXzbT+OuUAFqNqFjL+4IGLBgCJC3ZOShY" crossorigin="anonymous"></script>
+    <script>window.jQuery || document.write('<script src="bower_components/jquery/dist/jquery.min.js"><\/script>')</script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/tether/1.2.0/js/tether.min.js" integrity="sha384-Plbmg8JY28KFelvJVai01l8WyZzrYWG825m+cZ0eDDS1f7d/js6ikvy1+X+guPIB" crossorigin="anonymous"></script>
+    <script src="bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+    <!-- Just to make our placeholder images work. Don't actually copy the next line! -->
+    <script src="js/holder.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="js/ie10-viewport-bug-workaround.js"></script>
+    <script>
+			$(".panel-faq > .panel-heading").click(function(){
+					$(this).parent().children(".panel-body").slideToggle();
+					if ($(".fa", this).hasClass("fa-plus") === true) {
+							$(".fa", this).removeClass("fa-plus").addClass("fa-minus");
+					}
+					else {
+							$(".fa", this).removeClass("fa-minus").addClass("fa-plus");
+					}
+			});
+		</script>
+    <!-- </body></html> -->
+  </body>
+</html>
