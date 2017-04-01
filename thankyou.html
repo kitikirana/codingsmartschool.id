@@ -34,56 +34,15 @@
    	<img src="img/logo.png" alt="Coding Smart School" style="width:60%" heigth="300">
    </a>
    		<center>
-			<div class="form">
-				<hr>
-				<fieldset>
-					<div class="row">
-						<div class="col-md-6">
-							<label for="name">Nama Kamu</label>
-							<input type="text" id="name" class="form-control" ><br>
-						</div>
-						<div class="col-md-6">
-							<label for="hp">No HP Kamu</label>
-							<input type="number" id="hp" class="form-control" ><br>
-						</div>
-					</div>
-					<br><br><br>
-					<div class="row">
-						<div class="col-md-6">
-							<label for="alamat">Alamat Kamu</label>
-							<input type="text" id="alamat" class="form-control" ><br>
-						</div>
-						<div class="col-md-6">
-							<label for="email">Email Kamu</label>
-							<input type="email" id="email" class="form-control" ><br>
-						</div>
-					</div>
-					<br><br><br>
-					<div class="row">
-						<div class="col-md-6">
-							<label for="watson">Sebutkan Riwayat Pendidikanmu</label>
-							<input type="text" id="watson" class="form-control" ><br>
-						</div>
-						<div class="col-md-6">
-							<label for="emma_watson">Masukan Tanggal Lahirmu</label>
-							<input type="date" id="emma_watson" class="form-control" ><br>
-						</div>
-					</div>
-					<br><br><br>
-					<div class="row">
-						<div class="col-md-12">
-							<label for="alasan"><h3>Apa tujuanmu mengikuti Coding Smart School?</h3></label>
-							<textarea id="alasan" class="form-control" rows="4" style="width:70%">
-							</textarea>
-						</div>
-					</div>
-					
-					
-					
-					<center><br><button class="btn btn-primary raised btn-lg" onclick="daftar()">DAFTAR</button></center>
-				</fieldset>			
-			</div>
+   			<h1>Terima kasih telah telah mendaftar,<br>tunggu kabar selanjutnya lewat <a href="mailto:codingsmartschool@gmail.com">email</a> atau website ini.</h1>
 		</center>
+		<script>
+		 $(window).on("load", function(){
+    			window.setTimeout( function(){
+      			window.location = "/index.html";
+    			}, 5000 );
+  		 })
+		</script>
    </div>  
    <br><br>
    <hr>  
