@@ -19,18 +19,36 @@ function daftar() {
 	var watson = $('#watson').val();
 	var lahir = document.getElementById("emma_watson").value;
 	var alasan = $('#alasan').val();
+
 	var lowercase = nama.toLowerCase();
 	var emma = lowercase.replace(/\s/g,'');
 
-	firebase.database().ref(emma).set({
-	    nama: nama,
-	    no_hp: hp,
-	    alamat: alamat,
-	    email: email,
-	    riwayat_pendidikan: watson,
-	    tanggal_lahir: lahir,
-	    alasan: alasan
-	 });
-	 
-	 window.location.href = 'thankyou.html';
+	if (nama == '') {
+		alert("Nama tidak boleh kosong");
+	} else if (hp == '') {
+		alert("Nomor HP tidak boleh kosong")
+	} else if (alamat == '') {
+		alert("Alamat tidak boleh kosong")
+	} else if (email == '') {
+		alert("Email tidak boleh kosong")
+	} else if (watson == '') {
+		alert("Riwayat pendidikan tidak boleh kosong")
+	} else if (lahir == '') {
+		alert("Tanggal lahir tidak boleh kosong")
+	} else if (alasan == '') {
+		alert("Mohon sebutkan kenapa kamu mau menjadi murid di Coding Smart School.")
+	} else {
+		firebase.database().ref(emma).set({
+		    nama: nama,
+		    no_hp: hp,
+		    alamat: alamat,
+		    email: email,
+		    riwayat_pendidikan: watson,
+		    tanggal_lahir: lahir,
+		    alasan: alasan
+		 });
+		 
+		 window.location.href = 'thankyou.html';
+	}
+
 }
