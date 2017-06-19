@@ -9,6 +9,7 @@ var config = {
 firebase.initializeApp(config);
 
 var mom = firebase.database().ref();
+
 function daftar() {
 	'use strict'
 	// Inputs
@@ -16,9 +17,10 @@ function daftar() {
 	var hp = $('#hp').val();
 	var alamat = $('#alamat').val();
 	var email = $('#email').val();
-	var watson = $('#watson').val();
-	var lahir = document.getElementById("emma_watson").value;
-	var alasan = $('#alasan').val();
+	var sma = $('#sma').val();emma
+	var lahir = document.getElementById("tanggal_lahir").value;
+	var sma = $('#sma').val();
+	var minat = $('#minat').val();
 
 	var lowercase = nama.toLowerCase();
 	var emma = lowercase.replace(/\s/g,'');
@@ -31,21 +33,22 @@ function daftar() {
 		alert("Alamat tidak boleh kosong")
 	} else if (email == '') {
 		alert("Email tidak boleh kosong")
-	} else if (watson == '') {
-		alert("Riwayat pendidikan tidak boleh kosong")
+	} else if (smp == '') {
+		alert("Mohon sebutkan asal SMP mu")
 	} else if (lahir == '') {
 		alert("Tanggal lahir tidak boleh kosong")
-	} else if (alasan == '') {
-		alert("Mohon sebutkan kenapa kamu mau menjadi murid di Coding Smart School.")
+	} else if (sma == '') {
+		alert("Mohon sebutkan SMA daftaranmu")
 	} else {
-		firebase.database().ref(emma).set({
+		firebase.database().ref('gelombang_2/' + emma).set({
 		    nama: nama,
 		    no_hp: hp,
 		    alamat: alamat,
 		    email: email,
-		    riwayat_pendidikan: watson,
+		    smp: smp,
 		    tanggal_lahir: lahir,
-		    alasan: alasan
+		    sma: sma,
+		    minat: minat
 		 });
 		 
 		 window.location.href = 'thankyou.html';
