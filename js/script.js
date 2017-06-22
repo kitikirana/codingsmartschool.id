@@ -40,7 +40,7 @@ function daftar() {
 	} else if (sma == '') {
 		alert("Mohon sebutkan SMA daftaranmu")
 	} else {
-		firebase.database().ref('gelombang_2/' + emma).set({
+		firebase.database().ref('data_pendaftar/gelombang_2/' + emma).set({
 		    nama: nama,
 		    no_hp: hp,
 		    alamat: alamat,
