@@ -17,13 +17,16 @@ function daftar() {
 	var hp = $('#hp').val();
 	var alamat = $('#alamat').val();
 	var email = $('#email').val();
-	var sma = $('#sma').val();emma
+	var sma = $('#sma').val();
 	var lahir = document.getElementById("tanggal_lahir").value;
 	var sma = $('#sma').val();
 	var minat = $('#minat').val();
-
-	var lowercase = nama.toLowerCase();
-	var emma = lowercase.replace(/\s/g,'');
+	var convert = nama.toLowerCase().replace(/\s/g,'');
+	var date = new Date(),
+	    year = date.getFullYear(),
+	    month = date.getMonth() + 1,
+	    day = date.getDate(),
+	    right_now = year + '-' + month + '-' + day;
 
 	if (nama == '') {
 		alert("Nama tidak boleh kosong");
@@ -40,7 +43,7 @@ function daftar() {
 	} else if (sma == '') {
 		alert("Mohon sebutkan SMA daftaranmu")
 	} else {
-		firebase.database().ref('data_pendaftar/gelombang_2/' + emma).set({
+		firebase.database().ref('data_pendaftar/gelombang_2/' + convert).set({
 		    nama: nama,
 		    no_hp: hp,
 		    alamat: alamat,
@@ -48,7 +51,8 @@ function daftar() {
 		    smp: smp,
 		    tanggal_lahir: lahir,
 		    sma: sma,
-		    minat: minat
+		    minat: minat,
+		    tanggal_daftar: right_now
 		 });
 		 
 		 window.location.href = 'thankyou.html';
