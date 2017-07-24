@@ -17,7 +17,7 @@ function daftar() {
 	var hp = $('#hp').val();
 	var alamat = $('#alamat').val();
 	var email = $('#email').val();
-	var sma = $('#sma').val();
+	var smp = $('#smp').val();
 	var lahir = document.getElementById("tanggal_lahir").value;
 	var sma = $('#sma').val();
 	var minat = $('#minat').val();
@@ -26,8 +26,14 @@ function daftar() {
 	    year = date.getFullYear(),
 	    month = date.getMonth() + 1,
 	    day = date.getDate(),
-	    right_now = year + '-' + month + '-' + day;
+	    hour = date.getHours(),
+	    minutes = date.getMinutes(),
+	    seconds = date.getSeconds(),
+	    submit_date = year + '-' + month + '-' + day,
+	    submit_time = hour + ':' + minutes + ':' + seconds,
+	    submit_full = submit_date + ' ' + submit_time;
 
+	// Shit conditions because we can't let them empty this piece of shit
 	if (nama == '') {
 		alert("Nama tidak boleh kosong");
 	} else if (hp == '') {
@@ -52,7 +58,7 @@ function daftar() {
 		    tanggal_lahir: lahir,
 		    sma: sma,
 		    minat: minat,
-		    tanggal_daftar: right_now
+		    submit: submit_full
 		 });
 		 
 		 window.location.href = 'thankyou.html';
